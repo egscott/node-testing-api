@@ -18,7 +18,7 @@ app.post("/todos", (req, res) => {
       res.send(doc);
     },
     e => {
-      res.status(400).send(e.message);
+      res.status(400).send(e);
     }
   );
 });
@@ -26,3 +26,5 @@ app.post("/todos", (req, res) => {
 app.listen(3003, () => {
   console.log(`Started on port 3003`);
 });
+
+module.exports = { app };
